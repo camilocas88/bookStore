@@ -1,0 +1,63 @@
+#books {
+    border-radius: 0.25rem;
+    background: #f9f9f9 !important;
+  }
+  section {
+    padding: 20px 0;
+  }
+  #books .card {
+    border: none;
+    background: #fff;
+  }
+  .card_book {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+  
+  .card_book .card {
+    min-height: 312px;
+  }
+  
+  p.card-text,
+  h4.card-title {
+    min-height: 96px !important;
+  }
+  
+  .card-title {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .card_book .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
+  div.container-precio-idioma{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-social{
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    border-color: rgba(0,0,0,0.2)
+
+
+    
+  }
+  .btn-facebook{
+    background: #3b5998;
+  }
+
+  .btn-google{
+    background: #dd4d39;
+  }

@@ -1,0 +1,104 @@
+<!-- <section id="profile" class="container">
+  <div class="row mt-5">
+    <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center card">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
+      </div>
+      <div class="row user-details">
+        <div class="col-12">
+          <img src="{{user.photoUrl}}" class="rounded-circle img-thumbnail" alt="profile">
+          <h5 *ngIf="providerId != 'pass'">{{user.name}}</h5>
+          <p class="row">
+            {{user.email}}
+          </p>
+          <div class="row card_register">
+            <div class="card">
+              <div class="card-body text-center">
+                <form #formRegister="ngForm" (ngSubmit)="register()">
+                  <div class="alert alert-danger" role="alert" *ngIf="isError">
+                    {{msgError}}
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Nombre" [(ngModel)]="name" required
+                      minlength="4">
+                    <div class="alert alert-danger" role="alert" *ngIf="email.touched && !email.valid"></div>
+                    <div class="form-group">
+                      <h5>Select image:</h5>
+                      <div class="custom-file">
+                        <input type="file" accept=".png, .jpg" (change)="onUpload($event)" class="custom-file-input"
+                          id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="
+                              (uploadPercent | async) + '%'">
+                        </div>
+                      </div>
+                    </div>
+                    <input #imageUser type="hidden" [value]="urlImage | async">
+                    <button *ngIf="urlImage | async; else btnDisabled " type="submit"
+                      class="btn btn-block btn-dark mb-2 btn-block">Register</button>
+                    <ng-template #btnDisabled>
+                      <button type="submit" disabled=true
+                        class="btn btn-block btn-secondary mb-2 btn-block">Register</button>
+                    </ng-template>
+                    <a href="" (click)="onLogout()">Salir</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="profile" class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row justify-content-center">
+              <div class="col-md-12 mt-5">
+                <div class="d-flex justify-content-center">
+                  <a class="" href="#">
+                    <img src="{{user.photoUrl}}" class="rounded-circle img-thumbnail" alt="profile">
+                  </a>
+                </div>
+              </div>
+              <div class="text-center">
+                <h2 *ngIf="providerId !=  'pass'">{{user.name}}</h2>
+                <p>
+                  <a href="#" class="remove-decoration"><strong>{{user.email}}</strong></a> <br>
+                </p>
+              </div>
+            </div>
+            <div *ngIf="providerId == 'pass'"  class="row justify-content-center">
+              <div class="form-group col-4 text-center ">
+                <label for="exampleInputEmail1"><strong>Name</strong></label>
+                <input type="text" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Enter your name">
+              </div>
+
+            </div>
+          </div>
+
+          <div id="IdFooter" class="panel-footer text-center">
+            <ul class="social-network social-circle">
+              <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+              <li><a href="https://www.facebook.com/blood.pssus" class="icoFacebook" title="Facebook"><i
+                    class="fa fa-facebook"></i></a></li>
+              <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="https://lk.linkedin.com/pub/sachitha-seram/85/a2a/618" class="icoLinkedin"
+                  title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</section>
